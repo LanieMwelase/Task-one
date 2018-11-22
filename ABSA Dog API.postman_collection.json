@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "f5aa1427-3183-41e8-ac2c-4ac8de3714b9",
+		"name": "ABSA Dog API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Dog Breeds",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ad8185a7-efab-4460-a6c9-2d9a036a04a5",
+						"exec": [
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.not.have.status;",
+							"    pm.response.to.have.status(\"retriever\");",
+							"}); //Verify if \"retriever\" is in the list"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://dog.ceo/api/breeds/list/all",
+					"protocol": "https",
+					"host": [
+						"dog",
+						"ceo"
+					],
+					"path": [
+						"api",
+						"breeds",
+						"list",
+						"all"
+					]
+				},
+				"description": "A list of all dog breeds"
+			},
+			"response": []
+		},
+		{
+			"name": "Retriever Sub-breeds",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b7eb42de-ca9f-4c22-bb5d-678b43c0e76c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://dog.ceo/api/breed/retriever/list",
+					"protocol": "https",
+					"host": [
+						"dog",
+						"ceo"
+					],
+					"path": [
+						"api",
+						"breed",
+						"retriever",
+						"list"
+					]
+				},
+				"description": "A list of breeds under retriver "
+			},
+			"response": []
+		},
+		{
+			"name": "Golden Sub-breed random images",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3056ae6a-78bb-4e0d-bea2-a523af40c311",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://dog.ceo/api/breed/retriever/golden/images/random",
+					"protocol": "https",
+					"host": [
+						"dog",
+						"ceo"
+					],
+					"path": [
+						"api",
+						"breed",
+						"retriever",
+						"golden",
+						"images",
+						"random"
+					]
+				},
+				"description": "random images for the \"golde\" sub-breed"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "25647901-960e-42ac-8d88-25d9edcc25d0",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "22213870-e156-4f7f-8e6b-44dbdaaf83a7",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
